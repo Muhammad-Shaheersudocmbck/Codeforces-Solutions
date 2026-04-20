@@ -1,0 +1,15 @@
+a = input().lower()
+b = input().lower()
+
+a_ascii = []
+b_ascii = []
+
+for i in range(len(a)):
+  a_ascii.append(ord(a[i])) 
+  b_ascii.append(ord(b[i]))
+if a_ascii<b_ascii:
+  print(-1)
+if a_ascii > b_ascii:
+  print(1)
+if a_ascii == b_ascii:
+  print(0)
