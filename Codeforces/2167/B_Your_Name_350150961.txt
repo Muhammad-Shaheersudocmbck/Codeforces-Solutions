@@ -1,0 +1,7 @@
+for i in range(int(input())):
+    a = int(input())
+    b,c = map(str, input().split())
+    if sorted(list(b)) == sorted(list(c)):
+        print("YES")
+    else:
+        print("NO")
