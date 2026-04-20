@@ -1,0 +1,9 @@
+a = int(input())
+e = 0
+for i in range(a):
+  b,c,d = map(int, input().split())
+  if (b == 1 and c==1) or (b==1 and d==1) or (c==1 and d==1):
+    e+=1
+  else:
+    pass
+print(e)
