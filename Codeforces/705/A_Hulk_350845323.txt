@@ -1,0 +1,11 @@
+a = int(input())
+b = ["that"]*(a-1)+['it']
+
+c = []
+
+for i in range(a):
+  if i%2==0:
+    c.append(f"I hate {b[i]}")
+  else:
+    c.append(f'I love {b[i]}')
+print(' '.join(c))
