@@ -1,0 +1,12 @@
+import statistics
+
+a,b,c = map(int, input().split())
+d = [a,b,c]
+if max(a,b,c) - min(a,b,c) >= 10:
+    print("check again")
+elif statistics.median(d) == a:
+    print("final",a)
+elif statistics.median(d) == b:
+    print("final",b)
+elif statistics.median(d) == c:
+    print("final",c)
