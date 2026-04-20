@@ -1,0 +1,9 @@
+a = int(input())
+
+b = {"Tetrahedron" : 4, "Cube" : 6, "Octahedron" : 8, "Dodecahedron" : 12, "Icosahedron": 20}
+number = 0
+
+for i in range(a):
+  c = input()
+  number+=b[c]
+print(number)
