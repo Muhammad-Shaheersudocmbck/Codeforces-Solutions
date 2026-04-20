@@ -1,0 +1,10 @@
+a = int(input())
+
+for i in range(a):
+  b = int(input())
+  c = list(input())
+  if '...' in ''.join(c):
+    print(2)
+    continue
+  else:
+    print(c.count("."))
