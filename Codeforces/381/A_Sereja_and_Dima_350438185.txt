@@ -1,0 +1,25 @@
+b = int(input())
+a = list(map(int, input().split()))
+i = 0
+j = len(a)-1
+sereja = 0
+dima = 0
+move = 0
+while i<=j:
+  move+=1
+  if move%2==0:
+    if a[i]>a[j]:
+      sereja+=a[i]
+      i+=1
+      
+    else:
+      sereja+=a[j]
+      j-=1
+  else:
+    if a[i]>a[j]:
+      dima+=a[i]
+      i+=1
+    else:
+      dima+=a[j]
+      j-=1
+print(dima, sereja)
