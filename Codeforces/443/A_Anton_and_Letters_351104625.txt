@@ -1,0 +1,8 @@
+a = list(input())
+li = []
+
+for i in a:
+  if i in '{}, ':
+    continue
+  li.append(i)
+print(len(set(li)))
