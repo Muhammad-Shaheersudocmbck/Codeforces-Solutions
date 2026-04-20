@@ -1,0 +1,7 @@
+a = input()
+
+d = []
+
+for i in a:
+  d.append(ord(i))
+print(chr(max(d))*a.count(chr(max(d))))
