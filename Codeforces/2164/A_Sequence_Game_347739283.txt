@@ -1,0 +1,8 @@
+for i in range(int(input())):
+  a = int(input())
+  b = list(map(int, input().split()))
+  c = int(input())
+  if min(b)>c or max(b)<c:
+    print("NO")
+  else:
+    print("YES")
