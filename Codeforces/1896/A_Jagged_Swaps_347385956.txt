@@ -1,0 +1,9 @@
+a = int(input())
+
+for i in range(a):
+  b = int(input())
+  lis = list(map(int, input().split()))
+  if lis[0] == 1:
+    print("YES")
+  else:
+    print("NO")
