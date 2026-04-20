@@ -1,0 +1,10 @@
+for _ in range(int(input())):
+  a = input()
+  if len(set(a)) == 1:
+    print("NO")
+  else:
+    print("YES")
+    if ''.join(sorted(a)) !=a:
+      print(''.join(sorted(a)))
+    else:
+      print(a[::-1])
