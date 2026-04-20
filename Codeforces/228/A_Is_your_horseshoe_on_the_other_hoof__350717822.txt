@@ -1,0 +1,8 @@
+a = list(map(int, input().split()))
+si = []
+li = 0
+for i in a:
+  if i not in si:
+    li+=a.count(i)-1
+    si.append(i)
+print(li)
