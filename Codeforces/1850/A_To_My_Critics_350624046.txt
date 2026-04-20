@@ -1,0 +1,9 @@
+for i in range(int(input())):
+  a = list(map(int, input().split()))
+  b = max(a)
+  a.remove(b)
+  c = max(a)
+  if b+c >=10:
+    print("yEs")
+  else:
+    print('nO')
