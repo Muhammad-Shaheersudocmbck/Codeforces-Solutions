@@ -1,0 +1,10 @@
+li = []
+people = 0
+for i in range(int(input())):
+  
+  a,b = map(int, input().split())
+  people-=a
+  people+=b
+  li.append(people)
+  
+print(max(li))
