@@ -1,0 +1,80 @@
+#==================== IMPORTS ====================
+
+import sys
+import math
+
+#================== FAST INPUT ===================
+
+input = sys.stdin.readline
+
+#================== SHORT NAMES =================
+
+mn = min
+mx = max
+s = sum
+sqrt = math.sqrt
+srtd = sorted
+
+#================== INPUT HELPERS ================
+
+# >>> LINE INPUT
+def linp(t=int):
+    return list(map(t, input().split()))
+
+# >>> STRING INPUT
+def sinp():
+    return input().strip()
+
+# >>> INTEGER INPUT
+def iinp():
+    return int(input())
+
+def miinp():
+    return map(int, input().split())
+
+# >>> ABSOLUTE INPUT
+def absinp():
+    return [abs(x) for x in linp(int)]
+
+#================== USEFUL FUNCTIONS ============
+
+# >>> SIEVE OF ERATOSTHENES
+def sieve(n):
+    p = [1] * (n + 1)
+    p[0] = p[1] = 0
+    for i in range(2, int(n**0.5) + 1):
+        if p[i]:
+            for j in range(i * i, n + 1, i):
+                p[j] = 0
+    return p
+
+# >>> PREFIX SUM
+def ps(l):
+    p = l[:]
+    for i in range(1, len(p)):
+        p[i] += p[i-1]
+    return p
+
+# >>> GCD
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+# >>> LCM
+def lcm(a, b):
+    return a * b // gcd(a, b)
+
+#================== MAIN CODE ===================
+
+def solve():
+    a,b,c = miinp()
+    print(a^b^c)
+
+#================== TESTCASES ===================
+
+T = 1
+T = iinp()
+
+for _ in range(T):
+    solve()
