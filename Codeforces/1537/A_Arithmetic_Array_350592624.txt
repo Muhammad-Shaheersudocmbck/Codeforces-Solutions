@@ -1,0 +1,9 @@
+for i in range(int(input())):
+  a = int(input())
+  b = list(map(int, input().split()))
+  if sum(b)==a:
+    print(0)
+  elif sum(b)<a:
+    print(1)
+  else:
+    print(sum(b)-a)
