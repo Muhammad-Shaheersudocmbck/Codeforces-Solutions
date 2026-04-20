@@ -1,0 +1,6 @@
+a = int(input())
+b = list(map(str, input().split()))
+if b.count('1') == len(b) or b.count('2') == len(b):
+  print(*b)
+else:
+  print(*([2]+[1]+((b.count('2')-1)*['2'])+((b.count('1')-1)*["1"])))
