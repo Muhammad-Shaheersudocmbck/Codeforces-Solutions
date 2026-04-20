@@ -1,0 +1,132 @@
+#==================== IMPORTS ====================
+
+import sys
+import math
+
+#================== FAST INPUT ===================
+
+input = sys.stdin.readline
+
+#================== SHORT NAMES =================
+
+mn = min
+mx = max
+s = sum
+sqrt = math.sqrt
+srtd = sorted
+
+#================== INPUT HELPERS ================
+
+# >>> LINE INPUT
+def linp(t=int):
+    return list(map(t, input().split()))
+
+# >>> STRING INPUT
+def sinp():
+    return input().strip()
+
+# >>> INTEGER INPUT
+def iinp():
+    return int(input())
+
+# >>> MORE INTEGER INPUT
+def miinp():
+    return map(int, input().split())
+
+# >>> ABSOLUTE INPUT
+def absinp():
+    return [abs(x) for x in linp(int)]
+
+#================== USEFUL FUNCTIONS ============
+
+# >>> MEX
+def mex(l):
+    a = srtd(l[:])
+    for i in range(len(a)):
+        if i not in a:
+            return i
+    return a[-1]+1
+
+# >>> FIXED SIZE SLIDING WINDOW
+def maxsum(a, k):
+    if k > len(a):
+        return None
+    cur = sum(a[:k])
+    best = cur
+    for r in range(k, len(a)):
+        cur += a[r]
+        cur -= a[r - k]
+        best = max(best, cur)
+    return best
+
+# >>> MAX SUBSEGMENT WITH MAX SUM
+def maxssum(a, k):
+    l = 0
+    cur = 0
+    best = 0
+    for r in range(len(a)):
+        cur += a[r]
+        while cur > k:
+            cur -= a[l]
+            l += 1
+        best = max(best, r - l + 1)
+    return best
+
+
+# >>> BINARY SEARCH
+def bsearch(l, t):
+    li = srtd(l)
+    low = 0
+    high = len(li) - 1
+
+    while low <= high:
+        mid = low + (high - low) // 2
+        if li[mid] == t:
+            return mid
+        elif li[mid] < t:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+
+# >>> SIEVE OF ERATOSTHENES
+def sieve(n):
+    p = [1] * (n + 1)
+    p[0] = p[1] = 0
+    for i in range(2, int(n**0.5) + 1):
+        if p[i]:
+            for j in range(i * i, n + 1, i):
+                p[j] = 0
+    return p
+
+# >>> PREFIX SUM
+def ps(l):
+    p = l[:]
+    for i in range(1, len(p)):
+        p[i] += p[i-1]
+    return p
+
+# >>> GCD
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+# >>> LCM
+def lcm(a, b):
+    return a * b // gcd(a, b)
+
+#================== MAIN CODE ===================
+
+def solve():
+    a = linp()
+    a = srtd(a)
+    print(a[3] - a[0], a[3] - a[1],a[3] - a[2])
+
+#================== TESTCASES ===================
+
+T = 1
+# T = iinp()
+
+for _ in range(T):
+    solve()
