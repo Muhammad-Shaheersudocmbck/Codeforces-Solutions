@@ -1,0 +1,6 @@
+for _ in range(int(input())):
+  a = list(input().split())
+  b = []
+  for i in a:
+    b.append(i[0])
+  print(''.join(b))
