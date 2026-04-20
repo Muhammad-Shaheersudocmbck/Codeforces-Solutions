@@ -1,0 +1,23 @@
+a = int(input())
+b = list(map(int, input().split()))
+c = b[:]
+b.sort()
+
+points = 0
+cans = 0
+i = a-1
+ind = []
+while(cans <a):
+  points += (b[i]*cans)+1
+  if(len(ind)==0):  
+    ind.append(c.index(b[i]))
+  elif c.index(b[i]) not in ind:
+    ind.append(c.index(b[i]))
+  else:
+    ind.append(c[ind[-1]+1:].index(b[i])+ind[-1]+1)
+    # print(ind)
+  cans +=1
+  i-=1
+print(points)
+for i in ind:
+  print(i+1, end = " ")
