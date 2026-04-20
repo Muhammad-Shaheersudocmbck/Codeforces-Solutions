@@ -1,0 +1,9 @@
+n,k = map(int, input().split())
+a = list(map(int, input().split()))
+starter = a[k-1]
+goon = 0
+
+for i in range(len(a)):
+  if a[i] >= starter and a[i]>0:
+    goon+=1
+print(goon)
