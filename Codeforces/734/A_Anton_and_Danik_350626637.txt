@@ -1,0 +1,8 @@
+input()
+a = input().lower()
+if a.count('a') > a.count('d'):
+  print("Anton")
+elif a.count('a') == a.count('d'):
+  print("Friendship")
+else:
+  print("Danik")
