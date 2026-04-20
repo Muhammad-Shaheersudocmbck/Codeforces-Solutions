@@ -1,0 +1,22 @@
+import math
+a = int(input())
+moves = 0
+for i in range(99999999999999999999999999999999999999999999999999999999999999999999999999):
+  if a == 0:
+    break
+  if a>=100:
+    a-=100
+    moves+=1
+  elif a>=20:
+    a-=20
+    moves +=1
+  elif a >= 10:
+    a-=10 
+    moves+=1
+  elif a>=5:
+    a-=5
+    moves+=1
+  else:
+    a-=1
+    moves+=1
+print(moves)
