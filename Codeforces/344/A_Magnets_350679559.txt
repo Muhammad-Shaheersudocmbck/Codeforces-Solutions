@@ -1,0 +1,14 @@
+a = int(input())
+li = []
+
+for i in range(a):
+    li.append(input().strip())
+
+if a == 0:
+    print(0)
+else:
+    groups = 1
+    for i in range(1, a):
+        if li[i] != li[i-1]:
+            groups += 1
+    print(groups)
