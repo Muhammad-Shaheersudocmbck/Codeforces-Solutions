@@ -1,0 +1,11 @@
+a = int(input())
+for i in range(a):
+  r = list(map(int, input().split()))
+  d = list(map(int, input().split()))
+  d.append(r[1])
+  d.insert(0,0)
+  dd = []
+  for i in range(len(d)-1):
+    dd.append(d[i+1]-d[i])
+  dd[-1]*=2
+  print(max(dd))
