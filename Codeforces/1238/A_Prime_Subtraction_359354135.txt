@@ -1,0 +1,7 @@
+a = int(input())
+for i in range(a):
+  c,d = map(int, input().split())
+  if c-d == 1:
+    print("NO")
+  else:
+    print("YES")
