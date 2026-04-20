@@ -1,0 +1,26 @@
+line1 = input().split()
+line2 = input().split()
+line3 = input().split()
+line4 = input().split()
+line5 = input().split()
+
+row = 0
+column = 0
+
+if '1' in line1:
+    row = 1
+    column = line1.index('1') + 1
+if '1' in line2:
+    row = 2  
+    column = line2.index('1') + 1
+if '1' in line3:
+    row = 3
+    column = line3.index('1') + 1
+if '1' in line4:
+    row = 4
+    column = line4.index('1') + 1
+if '1' in line5:
+    row = 5
+    column = line5.index('1') + 1
+
+print(abs(3 - row) + abs(3 - column))
