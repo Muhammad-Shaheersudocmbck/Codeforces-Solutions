@@ -1,0 +1,6 @@
+a = list(map(int, input().split("+")))
+sorted(a)
+for i in range(len(a)):
+  a[i] = str(a[i])
+a = sorted(a)
+print('+'.join(a))
