@@ -1,0 +1,8 @@
+a = int(input())
+b = input()
+li = [b[0]]
+
+for i in range(1,len(b)):
+  if b[i] != li[-1]:
+    li.append(b[i])
+print(abs(abs(len(li))-a))
