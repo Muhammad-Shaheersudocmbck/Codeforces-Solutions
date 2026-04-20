@@ -1,0 +1,9 @@
+a,b = map(int, input().split())
+c = map(int, input().split())
+width = 0
+for i in c:
+  if i>b:
+    width+=2
+  else:
+    width+=1
+print(width)
