@@ -1,0 +1,6 @@
+a = list(input())
+b = list(input())
+if b[::-1] == a:
+  print("YES")
+else:
+  print("NO")
