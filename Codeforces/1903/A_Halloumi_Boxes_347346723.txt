@@ -1,0 +1,10 @@
+a = int(input())
+for i in range(a):
+  k,n = map(int, input().split())
+  c = list(map(int, input().split()))
+  if c== sorted(c):
+    print("YES")
+  elif n >1:
+    print("YES")
+  else:
+    print("NO")
