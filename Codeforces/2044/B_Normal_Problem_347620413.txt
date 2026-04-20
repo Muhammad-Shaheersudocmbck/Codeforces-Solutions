@@ -1,0 +1,9 @@
+for i in range(int(input())):
+  b = list(input())
+  b = b[::-1]
+  for j in range(len(b)):
+    if b[j] == 'q':
+      b[j] = 'p'
+    elif b[j] == 'p':
+      b[j] = 'q'
+  print(''.join(b))
