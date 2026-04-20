@@ -1,0 +1,19 @@
+a = int(input())
+
+for i in range(a):
+  b = int(input())
+  c = input().lower()
+  reduced = ""
+  for j in range(len(c)):
+    if len(reduced) == 0:
+      reduced+=c[j]
+      continue
+    else:  
+      if reduced[-1] != c[j]:
+        reduced+=c[j]
+      else:
+        continue
+  if reduced == "meow":
+    print("YES")
+  else:
+    print("NO")
